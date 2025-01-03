@@ -29,7 +29,7 @@ export default function AddProduct() {
       console.log("formValues ka object ", formValues);
 
       const response = await axios.post(
-        `${API_KEY}/products/add`,
+        `${API_KEY}/product`,
         formValues,
         // { withCredentials: true }
       );
