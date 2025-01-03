@@ -47,13 +47,11 @@
 
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { API_KEY } from "../lib";
 
 // hooks function returns state
 export default function useProducts(query = "") {
   // memoization
-  // const API_KEY = `https://dummyjson.com/products${query}`;
-  const API_KEY = `http://localhost:3000/product`
-
   const [products, setProducts] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -62,7 +60,7 @@ export default function useProducts(query = "") {
     try {
       setError(null);
       setIsLoading(true);
-      const response = await axios(API_KEY);
+      const response = await axios(`${API_KEY}/product`);
 
       setProducts(response?.data?.products);
     } catch (error) {

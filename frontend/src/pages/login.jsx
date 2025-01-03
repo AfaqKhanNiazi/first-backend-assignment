@@ -1,4 +1,5 @@
 import axios from "axios";
+import { API_KEY } from "../lib";
 
 export default function Login() {
   const formSubmitHua = async (event) => {
@@ -14,7 +15,7 @@ export default function Login() {
       console.log("password: ", password);
 
       const response = await axios.post(
-        "https://dummyjson.com/auth/login",
+        `${API_KEY}/auth/login`,
         {
           username: "emilys",
           password: "emilyspass",

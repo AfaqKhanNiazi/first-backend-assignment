@@ -1,1 +1,1 @@
-export const API_KIY = 'https://first-backend-assignment.vercel.app'
+export const API_KEY = 'https://first-backend-assignment.vercel.app'

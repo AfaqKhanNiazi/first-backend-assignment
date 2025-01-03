@@ -103,12 +103,13 @@ import { IoHeartOutline } from "react-icons/io5";
 import { TbTruckDelivery } from "react-icons/tb";
 import { HiArrowPath } from "react-icons/hi2";
 import { useSelector } from "react-redux";
+import { API_KEY } from "../lib";
 
 export default function ProductDetail() {
   const params = useParams();
   console.log("params", params);
   const { data, error, isLoading } = useSWR(
-    `https://dummyjson.com/products/${params.id}`,
+    `${API_KEY}/products/${params.id}`,
     axios
   );
   const product = data?.data;
