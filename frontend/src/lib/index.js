@@ -1,0 +1,1 @@
+export const API_KIY = 'https://first-backend-assignment.vercel.app'
