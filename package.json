@@ -2,10 +2,10 @@
   "name": "first-backend-assignment",
   "version": "1.0.0",
   "description": "backend first assignment",
-  "main": "index.js",
+  "main": "index.mjs",
   "scripts": {
-    "start": "index.js",
-    "dev":"node --watch index.js",
+    "start": "index.mjs",
+    "dev":"node --watch index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
